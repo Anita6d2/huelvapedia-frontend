@@ -1,0 +1,28 @@
+
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col text-center">
+
+            <button *ngFor="let letra of letras" class="btn"
+
+            [ngClass]="{'btn-outline-primary':selectedLetra === letra}">
+            {{letra}}</button>
+
+            <!-- <button *ngFor="let letra of letras" class="btn mx-2"
+            (click) ="searchByLetter(letra)"
+            [ngClass]="{'btn-outline-primary':selectedLetra === letra}">
+            {{letra}}</button> -->
+
+          </div>
+        </div>
+        <div class="row">
+          <hr>
+          <div class="col">
+          <!-- <countries-table [palabras]="palabras"></countries-table> -->
+          </div>
+        </div>
+      </div>
+
+
+
+

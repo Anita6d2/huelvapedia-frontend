@@ -1,0 +1,19 @@
+<!-- (keyup.enter)="emitValue(txtInput.value)" -->
+
+<div class="input-group rounded">
+  <input type="search" [value]="initialValue" class="form-control rounded" [placeholder]="placeholder" aria-label="Search" aria-describedby="search-addon"
+  (keyup)="onKeyPress(txtInput.value)"
+  #txtInput/>
+  <span class="input-group-text border-0" id="search-addon">
+    <span class="material-symbols-outlined">
+      search
+      </span>
+  </span>
+</div>
+
+<!-- <input type="text"
+[value] =  "initialValue"
+[placeholder]="placeholder"
+class="form-control"
+(keyup)="onKeyPress(txtInput.value)"
+#txtInput> -->
