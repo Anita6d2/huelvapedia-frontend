@@ -1,1 +1,27 @@
-<p>lista-page works!</p>
+<br>
+<h1>Diccionario</h1>
+<hr>
+<table class="table">
+<thead>
+  <tr>
+    <th scope="col" >#</th>
+    <th scope="col" >Palabra</th>
+    <th scope="col" >Estado</th>
+    <th scope="col" > </th>
+    <th scope="col" > </th>
+    <th scope="col" > </th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let palabra of palabras; let i = index" >
+    <th scope="row">{{i+1}}. </th>
+    <td>{{palabra.title}}</td>
+    <td>{{palabra.status}}</td>
+    <td><button type="button" class="btn btn-secondary btn-sm" [routerLink]="['/palabras/', palabra._id]" routerLinkActive="router-link-active">Ver más</button></td>
+    <td> <button type="button" class="btn btn-primary btn-sm" [routerLink]="['/palabras/edit/', palabra._id]" routerLinkActive="router-link-active">Editar</button> </td>
+    <td> <button type="button" class="btn btn-danger btn-sm" [routerLink]="['/palabras/', palabra._id]" routerLinkActive="router-link-active">Elininar</button> </td>
+
+  </tr>
+</tbody>
+</table>
+<br><br><br>
